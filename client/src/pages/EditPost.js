@@ -2,10 +2,11 @@ import {useEffect, useState} from "react";
 import {Navigate, useParams} from "react-router-dom";
 import Editor from "../Editor";
 
+
 // Open ai
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey: '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',
+  apiKey: process.env.REACT_APP_SECRET_KEY
 });
 const openai = new OpenAIApi(configuration);
 
